@@ -8,6 +8,19 @@ With this program, you can generate images like this one:
 
 The image above is 1000x1000 pixels and is a render three hundred iterations of the Mandelbrot formulas.
 
+## Install
+
+To install, download the files in the LibBmp folder, and fractal.cpp (the main program), and save them in the same directory.
+
+That's it! To compile and run, simply call g++ or your compiler of choice using the three files. 
+In g++, the command is as follows:
+```
+g++ fractal.cpp libbmp.cpp libbmp.h -o <executable_name>
+```
+
+To render the fractals, run the executable you've just created in the directory of your choice. The resulting images will be saved in the same directory.
+
+
 ## The math behind it
 
 Though fractals are *usually* represented through the complex plane, it is possible *- though not as elegant -* to calculate them with real numbers, and the process follows the same logic:
