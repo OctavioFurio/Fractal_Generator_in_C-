@@ -6,11 +6,11 @@ With this program, you can generate images like this one:
 
 ![fractal (1)](https://user-images.githubusercontent.com/103672525/196289510-8a7fbc12-0581-4069-90d1-80b1155c5a06.png)
 
-The image above is 1000x1000 pixels and is a render three hundred iterations of the Mandelbrot formulas.
+The image above is 1000x1000 pixels and is a render of three hundred iterations of the Mandelbrot formulas.
 
 ## Install
 
-To install, download the files in the LibBmp folder, and fractal.cpp (the main program), and save them in the same directory.
+To install, download the files from the LibBmp folder, and fractal.cpp (the main program), and save them in the same directory.
 
 That's it! To compile and run, simply call g++ or your compiler of choice using the three files. 
 In g++, the command is as follows:
@@ -23,24 +23,24 @@ To render the fractals, run the executable you've just created in the directory 
 
 ## The math behind it
 
-Though fractals are *usually* represented through the complex plane, it is possible *- though not as elegant -* to calculate them with real numbers, and the process follows the same logic:
+Though fractals are *usually* represented in the complex plane, it is possible *- though not as elegant -* to calculate them with real numbers, and the process follows the same logic:
 
-> Chose a point (x, y) and call its coordinates x0 and y0.
+> Pick a point (x, y) and call its coordinates x0 and y0.
 > Apply the following equations:
 > 
 >> f(x) = x² - y² + x0
 >> 
 >> g(y) = 2xy + y0
 > 
-> Thus, for every iteration, apply f to itself and g to itself, as such:
+> Then, for every new iteration, apply f to itself and g to itself, as such:
 > 
 >> f(f(f(...(f(x))...)))
 >>
 >> g(g(g(...(g(y))...)))
 > 
-> If, after any given iteration, the values of X or Y leave the area defined by the circle x0² + y0² = 4, that point does not belong to the set, and this is drawn as the color representing it's iteration.
+> If, after any given iteration, the values of X or Y leave the area defined by the circle x0² + y0² = 4, that point does not belong to the set, and then is drawn as the color representing the last iteration in which it was present in such area.
 
-The Julia sets are easy to achieve - simply change x0 and y0 to a number x' and y' of your liking, such that (-1 < x' < 1) and (-1 < y' < 1).
+The Julia sets are easy to achieve from there - simply change x0 and y0 to a number x' and y' of your liking, such that (-1 < x' < 1) and (-1 < y' < 1).
 
 The example program given (fractal.cpp) has an implementation that easily allows you to choose which you want to generate.
 
