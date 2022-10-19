@@ -6,7 +6,7 @@ float square(float x) { return x * x; }
 
 int main() {
 
-  int size = 5000;
+  int size = 5000;  // Size of image - change as you will
   int maxSteps = size / 30;
   int center = size / 2;
   int color = 0, step;
@@ -28,15 +28,15 @@ int main() {
       // y1 = y; // Un-comment these lines to render Mandelbrot
 
       step = 1;
-      while (square(x) + square(y) <= 4 && step < maxSteps) {  // 500 steps
+      while (square(x) + square(y) <= 4 && step < maxSteps) {
         
         color = 255 * (float)(((step) % maxSteps) / (float)maxSteps);
 
         tempX = x;
         tempY = y;
 
-        x = square(tempX) - square(tempY) + x1;     // xn = x² - x² + x0
-        y = (2 * tempX * tempY) + y1;               // xn = 2xy + y0
+        x = square(tempX) - square(tempY) + x1;     // xn = x² - x² + x'
+        y = (2 * tempX * tempY) + y1;               // xn = 2xy + y'
 
         step++;
       }
