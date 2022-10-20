@@ -8,7 +8,7 @@ With this program, you can generate images like this one:
 
 The image above is 1.000 x 1.000 pixels and is a render of three hundred iterations of the Mandelbrot formulas.
 
-It is interesting to notice, however, that for any images below the 10.000 x 10.000 resolution threshold, more than 100 iterations are not really necessary.
+It is interesting to notice, however, that for any images below the 10.000 x 10.000 resolution threshold, using more than 100 iterations is not really necessary.
 
 ## Install
 
