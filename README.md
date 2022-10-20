@@ -6,19 +6,28 @@ With this program, you can generate images like this one:
 
 ![fractal (1)](https://user-images.githubusercontent.com/103672525/196289510-8a7fbc12-0581-4069-90d1-80b1155c5a06.png)
 
-The image above is 1000x1000 pixels and is a render of three hundred iterations of the Mandelbrot formulas.
+The image above is 1.000 x 1.000 pixels and is a render of three hundred iterations of the Mandelbrot formulas.
+
+It is interesting to notice, however, that for any images below the 10.000 x 10.000 resolution threshold, more than 100 iterations are not really necessary.
 
 ## Install
 
-To install, download the files from the LibBmp folder, and fractal.cpp (the main program), and save them in the same directory.
+To install, run the following program via Git:
+
+```
+git clone https://github.com/OctavioFurio/Fractal_Generator_in_C-.git
+```
 
 That's it! To compile and run, simply call g++ or your compiler of choice using the three files. 
-In g++, the command is as follows:
+For example, in g++ the command is as follows:
+
 ```
-g++ fractal.cpp libbmp.cpp libbmp.h -o <executable_name>
+g++ libbmp.h libbmp.cpp fractal.cpp -o example_program
 ```
 
 To render the fractals, run the executable you've just created in the directory of your choice. The resulting images will be saved in the same directory.
+
+After compilation, you can save the executable, by itself, anywhere in your file system, and the generated images will be saved in the same directory.
 
 
 ## The math behind it
