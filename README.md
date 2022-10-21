@@ -53,6 +53,21 @@ The Julia sets are easy to achieve from there - simply change x0 and y0 to a num
 
 The example program given (fractal.cpp) has an implementation that easily allows you to choose which you want to generate.
 
+## Want to contribute?
+
+Well, that's nice! Welcome aboard.
+
+You can contribute in many ways:
+
+- Rendering some more examples (please, keep them under 10Mb, if possible).
+- Optimizing the code to run faster or with less memory.
+- Implementing other famous fractals.
+- Optmizing filesizes would also be interesting.
+
+Create your own fork and make any changes you find interesting and I'll surely give it a look!
+
+Thanks a lot!
+
 ## Fonts and References
 
 This program is based around LIBBMP, which can be found [here](https://github.com/marc-q/libbmp).
