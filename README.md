@@ -57,16 +57,7 @@ The example program given (fractal.cpp) has an implementation that easily allows
 
 Well, that's nice! Welcome aboard.
 
-You can contribute in many ways:
-
-- Rendering some more examples (please, keep them under 10Mb, if possible).
-- Optimizing the code to run faster or with less memory.
-- Implementing other famous fractals.
-- Optmizing filesizes would also be interesting.
-
-Create your own fork and make any changes you find interesting and I'll surely give it a look!
-
-Thanks a lot!
+Please read the CONTRIBUTING.md file for instructions about your contributions.
 
 ## Fonts and References
 
