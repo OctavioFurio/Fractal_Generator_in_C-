@@ -1,10 +1,10 @@
-### Want to contribute?
+# Want to contribute?
 
-# Well, that's nice! Welcome aboard.
+## Well, that's nice! Welcome aboard.
 
-You can contribute in *many ways:
+You can contribute in *many ways*:
 
-- Rendering some more examples (please, keep them under 10Mb, if possible).
+- Rendering a new example (please, keep it under 10Mb, if possible).
 - Optimizing the code to run faster or with less memory.
 - Implementing other famous fractals.
 - Optmizing filesizes would also be interesting.
@@ -18,4 +18,4 @@ However, follow these guidelines:
 - If you implement other famous fractals, make sure to also change the README.md file to also explain it's formulas.
 - If you make a program to optimize filesize, make sure that it works from images in any resolution range.
 
-Thanks a lot!
+**Thanks a lot!**
