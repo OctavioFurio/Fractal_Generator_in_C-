@@ -1,6 +1,33 @@
 #include "libbmp.h"
 #include <iostream>
 #include <sstream>
+#include <sys/stat.h>
+#include <unistd.h>
+#include <string>
+#include <fstream>
+
+inline bool file_exists (const std::string& name) {
+    if (FILE *file = fopen(name.c_str(), "r")) {
+        fclose(file);
+        return true;
+    }
+
+    return false;
+}
+
+std::string takeNextFileName () {
+  std::string nextFileName = "Images/Output";
+  bool loop = true;
+  int num = 0;
+
+  while(loop){
+    num ++;
+    loop = file_exists(nextFileName + std::to_string(num) + ".png");
+  }
+
+  return (nextFileName + std::to_string(num) + ".png");
+
+}
 
 void generateFractal(int size, float x, float y);
 float getUserValue(std::string message, float defaultValue);
@@ -40,6 +67,7 @@ float getUserValue(std::string message, float defaultValue) {
 }
 
 void generateFractal(int size, float x, float y) {
+  std::string nextFileName;
   const int iterations = size / 30;      // Max iteraions.
   int color = 0, step;
 
@@ -74,5 +102,7 @@ void generateFractal(int size, float x, float y) {
       myImage.set_pixel((int)X, (int)Y, color, color / 4, color / 4);
     }
 
-  myImage.write("Output.png");
+  nextFileName = takeNextFileName();
+  myImage.write(nextFileName);
+
 }
