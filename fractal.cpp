@@ -1,16 +1,48 @@
 #include "libbmp.h"
 #include <iostream>
+#include <sstream>
+
+void generateFractal(int size, float x, float y);
+float getUserValue(std::string message, float defaultValue);
 
 float inline mod(float x) { return x < 0 ? -x : x; }
 float inline square(float x) { return x * x; }
 
 int main() {
 
-  const int size = 5000;            // Size of image - change as you will
-  const int iterations = size / 30; // Max iteraions.
+  int size;       // Size of image
+  float x, y;     // Relative positions
+  
+  std::cout << "Image size (5000): ";
+
+  size = getUserValue("Image size", 5000);
+  x = getUserValue("x value", 0);
+  y = getUserValue("y value", 0);
+
+  generateFractal(size, x, y);
+
+  return 0;
+}
+
+float getUserValue(std::string message, float defaultValue) {
+  std::string buffer;
+  std::stringstream number;
+  number << defaultValue;
+
+  std::cout << message << " (" << number.str() << "): ";
+  std::getline(std::cin, buffer);
+
+  if (buffer.empty()) {
+    return defaultValue;
+  } 
+  
+  return stof(buffer);
+}
+
+void generateFractal(int size, float x, float y) {
+  const int iterations = size / 30;      // Max iteraions.
   int color = 0, step;
 
-  float x = 0, y = 0;          // Relative positions
   float x1 = -0.01, y1 = 0.69; // X' and Y' for Julia
   float tempX = x;
   float tempY = y;
@@ -43,6 +75,4 @@ int main() {
     }
 
   myImage.write("Output.png");
-
-  return 0;
 }
