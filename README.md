@@ -18,11 +18,11 @@ To install, run the following program via Git:
 git clone https://github.com/OctavioFurio/Fractal_Generator_in_C-.git
 ```
 
-That's it! To compile and run, simply call g++ or your compiler of choice using the three files. 
+That's it! To compile and run, simply call g++ or your compiler of choice using the two files. 
 For example, in g++ the command is as follows:
 
 ```
-g++ libbmp.h libbmp.cpp fractal.cpp -o example_program
+g++ libbmp.cpp fractal.cpp -o example_program
 ```
 
 To render the fractals, run the executable you've just created in the directory of your choice. The resulting images will be saved in the same directory.
